@@ -1,6 +1,9 @@
+import os
 import discord 
 
 bot = discord.Bot()
+
+guild_ids = [int(os.getenv("834429780916830280"))]
 
 @bot.event
 async def conect():
@@ -12,7 +15,7 @@ async def test(ctx):
 
 @bot.command(name='membercount')
 async def membercount(ctx):
-    await ctx.send(len(discord.guild.member_count))
+    await ctx.send(len(discord.guild_ids.member_count))
 
 bot.run("MTA1OTUxNDY2NzgyOTAzNTAxOA.Gu86KI.7p20hi4sFqYT7eopHj_GcLv_3tzgwNa2tG-ajc")
 
