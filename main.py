@@ -14,10 +14,6 @@ intents = discord.Intents.default()
 intents.members = True
 client = commands.Bot(command_prefix='!', help_command=None, intents=intents)
 
-@client.event()
-async def on_ready():
-	await client.wait_until_ready()
-	print('online')
 	
 @client.event
 async def on_member_join(member):
