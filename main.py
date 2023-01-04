@@ -3,7 +3,7 @@ import discord
 
 bot = discord.Bot()
 
-guild_ids = [int(os.getenv("834429780916830280"))]
+guild_ids = [int(os.getenv(834429780916830280))]
 
 @bot.event
 async def conect():
