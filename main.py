@@ -14,11 +14,11 @@ intents = discord.Intents.default()
 intents.members = True
 client = commands.Bot(command_prefix='!', help_command=None, intents=intents)
 
-	
+
 @client.slash_command()
 async def membercount(ctx):
-    count = ctx.message.guild.member_count
-    await ctx.message.reply(f"Le serveur compte {count} {'membre' if count <= 1 else 'membres'}")
+    count = ctx.guild.member_count
+    await ctx.reply(f"Le serveur compte {count} {'membre' if count <= 1 else 'membres'}")
 	
 
 
