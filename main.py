@@ -18,7 +18,7 @@ client = commands.Bot(command_prefix='!', help_command=None, intents=intents)
 @client.slash_command()
 async def membercount(ctx):
     count = ctx.guild.member_count
-    await (f"Le serveur compte {count} {'membre' if count <= 1 else 'membres'}")
+    await ctx.respond(f"Le serveur compte {count} {'membre' if count <= 1 else 'membres'}")
 	
 
 
